@@ -1,111 +1,66 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rang Igénylés – Discord Szerver</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: white;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <title>Rang Igénylés</title>
+    <style>
+        body {
+            background: #181818;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
 
-    /* Fejléc kép */
-    .header-img img {
-      width: 100%;
-      max-width: 700px;
-      margin-top: 20px;
-    }
+        form {
+            background: #222;
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+            margin: auto;
+        }
 
-    /* Nitro doboz */
-    .deleted-nitro {
-      margin: 40px auto;
-      padding: 30px;
-      width: 80%;
-      max-width: 600px;
-      background: linear-gradient(135deg, #00c3ff, #00ffa6);
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
-      color: #003326;
-    }
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: none;
+        }
 
-    .deleted-nitro h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+        button {
+            width: 95%;
+            padding: 12px;
+            background: #00aaff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
 
-    .deleted-nitro p {
-      font-size: 18px;
-    }
-
-    /* Gomb */
-    .request-btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #ffffff;
-      border: none;
-      border-radius: 10px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .request-btn:hover {
-      background: #cfcfcf;
-    }
-  </style>
+        button:hover {
+            background: #0088cc;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="header-img">
-    <img src="tw1zzandv1bzrNormal.png" alt="Fejléc" />
-  </form>
+    <h1>Rang Igénylés</h1>
 
-  
+    <!-- Ezt küldi a FormSubmit az emailedre -->
+    <form action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST">
 
-  <form action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST" class="rank-section" action="mailto:minecraftsolyom@gmail.com" method="POST" enctype="text/plain" style="margin-top:60px; padding:30px; background:rgba(0,255,200,0.08); border-radius:20px; width:85%; max-width:700px; margin-left:auto; margin-right:auto;">
-    <h2 style="font-size:36px; margin-bottom:20px; color:#7fffd4; text-shadow:0 0 10px #00ffc8;">Rang Igénylés</h2>
+        <!-- Biztonsági paraméter, hogy ne dobja ki a POST hibát -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
-    <label style="font-size:20px;">Válassz rangot:</label><br><br>
-    <select style="padding:12px; width:60%; border-radius:10px; font-size:18px;">
-      <option>[⭐] VIP</option>
-      <option>[🌟] VIP+</option>
-      <option>[🛡️] Moderátor</option>
-    </select>
+        <input type="text" name="Felhasználónév" placeholder="Minecraft felhasználóneved" required>
 
-    <br><br><br>
+        <textarea name="Miért szeretnél rangot?" placeholder="Írd le, miért igényelsz rangot..." rows="5" required></textarea>
 
-    <label style="font-size:20px;">Miért szeretnél ilyen rangot?</label>
-    <textarea style="margin-top:10px; width:90%; height:120px; border-radius:10px; padding:10px; font-size:16px;"></textarea>
-
-    <br><br>
-
-    <label style="font-size:20px;">Milyen előnye lenne a szervernek?</label>
-    <textarea style="margin-top:10px; width:90%; height:120px; border-radius:10px; padding:10px; font-size:16px;"></textarea>
-
-    <br><br>
-
-    <button style="margin-top:20px; padding:15px 30px; font-size:20px; border:none; border-radius:12px; cursor:pointer; background:white;">Rang Igénylés</button>
-  </div>
-
-  <div style="margin-top:60px;">
-    <img src="tw1zzandv1bzrNormal.png" style="width:70%; max-width:650px; border-radius:20px; box-shadow:0 0 20px #00ffc8;" />
-  </div>
-
-  <div style="margin-top:40px; font-size:28px; color:#7fffd4; text-shadow:0 0 10px #00ffc8;">
-    Nem vagy tagja a szervernek?
-  </div>
-
-  <div style="margin-top:15px; font-size:32px; font-weight:bold; color:white; text-shadow:0 0 15px #ffffff;">
-    Csatlakozz most!
-  </div>
-
-  <div style="margin-top:20px; font-size:26px; color:#00ffc8;">
-    🔗 https://discord.gg/wufvEM3T 🔗
-  </div>
+        <button type="submit">Rang Igénylés</button>
+    </form>
 
 </body>
 </html>
