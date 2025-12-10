@@ -1,81 +1,117 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rang Igénylés</title>
+<meta charset="UTF-8">
+<title>Tw1zz & V1bzR HUB</title>
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: center;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            background: #121212;
-            font-family: Arial, sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    .header-img {
+        width: 80%;
+        max-width: 600px;
+        margin-top: 40px;
+    }
 
-        .container {
-            background: #1e1e1e;
-            padding: 30px;
-            border-radius: 15px;
-            width: 400px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: center;
-        }
+    .btn {
+        background: #00aaff;
+        padding: 15px 30px;
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 25px;
+        transition: 0.2s;
+    }
 
-        h1 {
-            margin-bottom: 20px;
-        }
+    .btn:hover {
+        background: #0088dd;
+        transform: scale(1.05);
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: none;
-            font-size: 16px;
-        }
+    .form-box {
+        background: #111;
+        width: 90%;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px #00aaff;
+    }
 
-        button {
-            width: 100%;
-            padding: 15px;
-            background: #0ea5e9;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            color: white;
-        }
+    input, select, textarea {
+        width: 90%;
+        padding: 12px;
+        margin-top: 15px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+    }
 
-        button:hover {
-            background: #0284c7;
-        }
-    </style>
+    textarea {
+        height: 120px;
+        resize: none;
+    }
+
+    .submit-btn {
+        width: 95%;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        background: #0099ff;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+        background: #007acc;
+    }
+</style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Rang Igénylés</h1>
+<!-- ---------- FEJLÉC KÉP ---------- -->
+<img src="tw1zzandv1bzrNormal.png" class="header-img">
 
-    <!-- FORMOK EZT KELL A FORM SUBMITNEK -->
+<!-- ---------- CSATLAKOZZ MOST GOMB ---------- -->
+<a href="#rang" class="btn">Csatlakozz most</a>
+
+<!-- ---------- RANG IGÉNYLÉS FORM ---------- -->
+<div class="form-box" id="rang">
+
+    <h2>Rang Igénylés</h2>
+
     <form action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST">
 
-        <!-- FormSubmit beállítások (kötelezők) -->
-        <input type="hidden" name="_subject" value="Új rang igénylés érkezett!">
+        <!-- szükséges a működéshez -->
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_subject" value="Új rang igénylés érkezett!">
+        <input type="hidden" name="_template" value="table">
 
-        <!-- NÉV -->
-        <input type="text" name="Minecraft felhasználónév" placeholder="Minecraft felhasználóneved" required>
+        <input type="text" name="Minecraft név" placeholder="Minecraft felhasználóneved" required>
 
-        <!-- INDOKLÁS -->
-        <textarea name="Indoklás" rows="5" placeholder="Írd le, miért igényelsz rangot..." required></textarea>
+        <select name="Kért rang" required>
+            <option value="">Válassz rangot...</option>
+            <option>⭐ VIP</option>
+            <option>🔥 VIP+</option>
+            <option>⚔️ MOD</option>
+        </select>
 
-        <!-- GOMB -->
-        <button type="submit">Rang Igénylés</button>
+        <textarea name="Indoklás" placeholder="Miért szeretnél rangot?" required></textarea>
+
+        <button class="submit-btn" type="submit">Rang Igénylés</button>
+
     </form>
 </div>
 
