@@ -1,123 +1,66 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rang Igénylés – Discord</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: white;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <title>Rang Igénylés</title>
+    <style>
+        body {
+            background: #181818;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
 
-    .header-img img {
-      width: 100%;
-      max-width: 700px;
-      margin-top: 20px;
-    }
+        form {
+            background: #222;
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+            margin: auto;
+        }
 
-    .rank-section {
-      margin-top: 60px;
-      padding: 30px;
-      background: rgba(0,255,200,0.08);
-      border-radius: 20px;
-      width: 85%;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: none;
+        }
 
-    select, textarea {
-      width: 90%;
-      padding: 12px;
-      border-radius: 10px;
-      font-size: 18px;
-      border: none;
-      margin-top: 10px;
-    }
+        button {
+            width: 95%;
+            padding: 12px;
+            background: #00aaff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
 
-    textarea {
-      height: 120px;
-    }
-
-    .send-btn {
-      margin-top: 25px;
-      padding: 15px 30px;
-      background: white;
-      color: black;
-      font-size: 20px;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-
-    .send-btn:hover {
-      background: #cccccc;
-    }
-  </style>
+        button:hover {
+            background: #0088cc;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Fejléc kép -->
-  <div class="header-img">
-    <img src="tw1zzandv1bzrNormal.png" alt="Fejléc" />
-  </div>
+    <h1>Rang Igénylés</h1>
 
-  <!-- Rang Igénylés űrlap -->
-  <form class="rank-section"
-        action="https://formsubmit.co/minecraftsolyom@gmail.com"
-        method="POST">
+    <!-- Ezt küldi a FormSubmit az emailedre -->
+    <form action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST">
 
-    <h2 style="font-size:36px; color:#7fffd4; text-shadow:0 0 10px #00ffc8;">
-      Rang Igénylés
-    </h2>
+        <!-- Biztonsági paraméter, hogy ne dobja ki a POST hibát -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
-    <label>Válassz rangot:</label><br>
-    <select name="Rang">
-      <option>[⭐] VIP</option>
-      <option>[🌟] VIP+</option>
-      <option>[🛡️] Moderátor</option>
-    </select>
+        <input type="text" name="Felhasználónév" placeholder="Minecraft felhasználóneved" required>
 
-    <br><br>
+        <textarea name="Miért szeretnél rangot?" placeholder="Írd le, miért igényelsz rangot..." rows="5" required></textarea>
 
-    <label>Miért szeretnéd ezt a rangot?</label>
-    <textarea name="Miért szeretnéd?"></textarea>
-
-    <br><br>
-
-    <label>Milyen előnye lenne a szervernek?</label>
-    <textarea name="Előny a szervernek"></textarea>
-
-    <br><br>
-
-    <button class="send-btn" type="submit">Rang Igénylés</button>
-
-    <!-- FormSubmit extra beállítások -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-  </form>
-
-  <!-- Discord meghívó rész -->
-  <div style="margin-top:60px;">
-    <img src="tw1zzandv1bzrNormal.png" style="width:70%; max-width:650px; border-radius:20px;">
-  </div>
-
-  <div style="margin-top:40px; font-size:28px; color:#7fffd4; text-shadow:0 0 10px #00ffc8;">
-    Nem vagy tagja a szervernek?
-  </div>
-
-  <div style="margin-top:15px; font-size:32px; font-weight:bold; color:white;">
-    Csatlakozz most!
-  </div>
-
-  <div style="margin-top:20px; font-size:26px; color:#00ffc8;">
-    🔗 https://discord.gg/wufvEM3T 🔗
-  </div>
+        <button type="submit">Rang Igénylés</button>
+    </form>
 
 </body>
 </html>
-
