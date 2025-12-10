@@ -1,119 +1,142 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="UTF-8">
-<title>Tw1zz & V1bzR HUB</title>
-<style>
-    body {
-        margin: 0;
-        background: #000;
-        font-family: Arial, sans-serif;
-        color: white;
-        text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rang Igénylés</title>
 
-    .header-img {
-        width: 80%;
-        max-width: 600px;
-        margin-top: 40px;
-    }
+    <style>
+        body {
+            margin: 0;
+            background: #0d0d0d;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
 
-    .btn {
-        background: #00aaff;
-        padding: 15px 30px;
-        border-radius: 10px;
-        color: white;
-        text-decoration: none;
-        font-size: 22px;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 25px;
-        transition: 0.2s;
-    }
+        /* Felső kép */
+        .top-image img {
+            width: 90%;
+            max-width: 700px;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
 
-    .btn:hover {
-        background: #0088dd;
-        transform: scale(1.05);
-    }
+        /* Rang igénylés box */
+        .form-box {
+            margin: 40px auto;
+            padding: 30px;
+            width: 85%;
+            max-width: 700px;
+            background: rgba(0,255,200,0.08);
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,255,200,0.3);
+        }
 
-    .form-box {
-        background: #111;
-        width: 90%;
-        max-width: 500px;
-        margin: 40px auto;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 0 15px #00aaff;
-    }
+        select, textarea {
+            width: 90%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            margin-top: 10px;
+        }
 
-    input, select, textarea {
-        width: 90%;
-        padding: 12px;
-        margin-top: 15px;
-        border-radius: 8px;
-        border: none;
-        font-size: 16px;
-    }
+        textarea {
+            height: 120px;
+        }
 
-    textarea {
-        height: 120px;
-        resize: none;
-    }
+        button {
+            margin-top: 25px;
+            padding: 15px 30px;
+            background: white;
+            color: black;
+            border: none;
+            font-size: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
 
-    .submit-btn {
-        width: 95%;
-        padding: 15px;
-        font-size: 20px;
-        font-weight: bold;
-        background: #0099ff;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        margin-top: 20px;
-        cursor: pointer;
-        transition: 0.2s;
-    }
+        button:hover {
+            background: #cfcfcf;
+        }
 
-    .submit-btn:hover {
-        background: #007acc;
-    }
-</style>
+        .bottom-image img {
+            width: 75%;
+            max-width: 700px;
+            margin-top: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #00ffc8;
+        }
+
+        .invite-text {
+            margin-top: 25px;
+            color: #7fffd4;
+            font-size: 30px;
+            text-shadow: 0 0 10px #00ffc8;
+        }
+
+        .join-now {
+            margin-top: 10px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .invite-link {
+            margin-top: 15px;
+            font-size: 26px;
+            color: #00ffc8;
+        }
+    </style>
 </head>
 <body>
 
-<!-- ---------- FEJLÉC KÉP ---------- -->
-<img src="tw1zzandv1bzrNormal.png" class="header-img">
+    <!-- FELSŐ KÉP -->
+    <div class="top-image">
+        <img src="tw1zzandv1bzrNormal.png" alt="Header">
+    </div>
 
-<!-- ---------- CSATLAKOZZ MOST GOMB ---------- -->
-<a href="#rang" class="btn">Csatlakozz most</a>
+    <!-- RANG IGÉNYLÉS FORM -->
+    <form class="form-box" action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST">
 
-<!-- ---------- RANG IGÉNYLÉS FORM ---------- -->
-<div class="form-box" id="rang">
+        <h2 style="font-size: 36px; margin-bottom: 10px; color:#7fffd4; text-shadow:0 0 10px #00ffc8;">
+            Rang Igénylés
+        </h2>
 
-    <h2>Rang Igénylés</h2>
-
-    <form action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST">
-
-        <!-- szükséges a működéshez -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Új rang igénylés érkezett!">
-        <input type="hidden" name="_template" value="table">
-
-        <input type="text" name="Minecraft név" placeholder="Minecraft felhasználóneved" required>
-
-        <select name="Kért rang" required>
-            <option value="">Válassz rangot...</option>
+        <label style="font-size: 20px;">Válaszd ki a rangot:</label><br>
+        <select name="Rang">
             <option>⭐ VIP</option>
-            <option>🔥 VIP+</option>
-            <option>⚔️ MOD</option>
+            <option>🌟 VIP+</option>
+            <option>🛡️ Moderátor</option>
         </select>
 
-        <textarea name="Indoklás" placeholder="Miért szeretnél rangot?" required></textarea>
+        <br><br>
 
-        <button class="submit-btn" type="submit">Rang Igénylés</button>
+        <label style="font-size: 20px;">Miért szeretnél ilyen rangot?</label>
+        <textarea name="Miért szeretnéd?"></textarea>
+
+        <br><br>
+
+        <label style="font-size: 20px;">Milyen előnye lenne a szervernek?</label>
+        <textarea name="Előny a szervernek"></textarea>
+
+        <button type="submit">Rang Igénylés</button>
+
+        <!-- FormSubmit rejtett beállítások -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
     </form>
-</div>
+
+    <!-- ALSÓ KÉP -->
+    <div class="bottom-image">
+        <img src="tw1zzandv1bzrNormal.png">
+    </div>
+
+    <!-- MEGHÍVÓ -->
+    <div class="invite-text">Nem vagy tagja a szervernek?</div>
+    <div class="join-now">Csatlakozz most!</div>
+    <div class="invite-link">🔗 https://discord.gg/wufvEM3T 🔗</div>
 
 </body>
 </html>
