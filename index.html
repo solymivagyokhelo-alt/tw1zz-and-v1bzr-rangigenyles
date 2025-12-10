@@ -2,65 +2,82 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rang Igénylés</title>
+
     <style>
         body {
-            background: #181818;
-            color: white;
+            margin: 0;
+            background: #121212;
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 80px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        form {
-            background: #222;
-            padding: 25px;
-            border-radius: 10px;
-            width: 350px;
-            margin: auto;
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
         }
 
         input, textarea {
-            width: 90%;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 5px;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
             border: none;
+            font-size: 16px;
         }
 
         button {
-            width: 95%;
-            padding: 12px;
-            background: #00aaff;
+            width: 100%;
+            padding: 15px;
+            background: #0ea5e9;
             border: none;
-            color: white;
+            border-radius: 10px;
             font-size: 18px;
-            border-radius: 6px;
             cursor: pointer;
+            color: white;
         }
 
         button:hover {
-            background: #0088cc;
+            background: #0284c7;
         }
     </style>
 </head>
 <body>
 
+<div class="container">
     <h1>Rang Igénylés</h1>
 
-    <!-- Ezt küldi a FormSubmit az emailedre -->
+    <!-- FORMOK EZT KELL A FORM SUBMITNEK -->
     <form action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST">
 
-        <!-- Biztonsági paraméter, hogy ne dobja ki a POST hibát -->
+        <!-- FormSubmit beállítások (kötelezők) -->
+        <input type="hidden" name="_subject" value="Új rang igénylés érkezett!">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_template" value="box">
 
-        <input type="text" name="Felhasználónév" placeholder="Minecraft felhasználóneved" required>
+        <!-- NÉV -->
+        <input type="text" name="Minecraft felhasználónév" placeholder="Minecraft felhasználóneved" required>
 
-        <textarea name="Miért szeretnél rangot?" placeholder="Írd le, miért igényelsz rangot..." rows="5" required></textarea>
+        <!-- INDOKLÁS -->
+        <textarea name="Indoklás" rows="5" placeholder="Írd le, miért igényelsz rangot..." required></textarea>
 
+        <!-- GOMB -->
         <button type="submit">Rang Igénylés</button>
     </form>
+</div>
 
 </body>
 </html>
