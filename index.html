@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rang Igénylés</title>
+
     <style>
         body {
             margin: 0;
@@ -80,6 +81,26 @@
         .join-btn:hover {
             background: #0088cc;
         }
+
+        .rank-info {
+            width: 55%;
+            margin: 50px auto;
+            background: #111;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px #00a6ff;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .rank-info h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .rank-info b {
+            color: #00aaff;
+        }
     </style>
 </head>
 <body>
@@ -93,28 +114,42 @@
 
         <form action="https://formsubmit.co/minecraftsolyom@gmail.com" method="POST">
 
-            <!-- Discord név (új mező) -->
             <input type="text" name="Discord név" placeholder="Add meg a Discord neved..." required>
 
-            <!-- Rang választása -->
             <select name="Kért rang" required>
                 <option value="" disabled selected>Válassz rangot...</option>
                 <option>⭐ VIP</option>
                 <option>💎 VIP+</option>
                 <option>🛡️ Moderátor</option>
+                <option>🛠️ Szerver Fejlesztő</option>
             </select>
 
-            <!-- Miért szeretnéd a rangot? -->
             <textarea name="Miért szeretnéd a rangot?" rows="4" placeholder="Miért szeretnéd ezt a rangot?" required></textarea>
 
-            <!-- Milyen előny a szervernek? -->
-            <textarea name="Mit profitál a szerver?" rows="4" placeholder="Milyen előnyben részesülne a szerver?" required></textarea>
+            <textarea name="Mit profitál a szerver?" rows="4" placeholder="Miben lenne hasznos a jelenléted?" required></textarea>
 
             <button type="submit">Rang Igénylés</button>
 
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Új rang igénylés érkezett!">
         </form>
+    </div>
+
+    <!-- Rang ismertető blokk -->
+    <div class="rank-info">
+        <h2>Rangok Leírása</h2>
+
+        <p><b>🛠️ Szerver Fejlesztő</b> – A szerver egyik legfontosabb technikai szerepe. A fejlesztő felel a scriptelésért, hibajavításért, optimalizálásért és az új funkciók bevezetéséért. A képen is látható ikon arról árulkodik, hogy ez a rang magasabb szintű szakértelmet és megbízhatóságot igényel. A szerver jövőjét befolyásolja minden munkája.</p>
+
+        <p><b>🛡️ Moderátor</b> – A közösség biztonsága és kényelme a feladata. Ő végzi a felhasználók segítését, a szabályszegők kezelését és a szerver mindennapi rendjének fenntartását. A moderátor ikonja a stabilitást és védelmet jelképezi.</p>
+
+        <p><b>⭐ VIP</b> – Támogatói rang, amely kisebb extra funkciókat és kényelmi előnyöket biztosít. A VIP tagok hozzájárulnak a szerver fenntartásához és fejlesztéséhez, ezzel közösségünk fontos tagjai.</p>
+
+        <p><b>💎 VIP+</b> – A VIP magasabb szintje, amely több funkciót, nagyobb kényelmet és extra lehetőségeket kínál. Az ikon a különlegesebb támogatói státuszt szimbolizálja, amely nagyban segíti a szerver fejlődését. (Az emoji változatlanul maradt!)</p>
+
+        <br>
+
+        <p>Ha úgy érzed, hogy megfelelően tudod képviselni a rangod és hasznos tagja lennél a csapatnak, bátran töltsd ki a fenti űrlapot!</p>
     </div>
 
     <!-- Alsó kép -->
